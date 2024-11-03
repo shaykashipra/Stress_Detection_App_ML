@@ -1,0 +1,98 @@
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:padding="16dp"
+    android:rowCount="2">
+
+    <!-- CPU Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/NotificationCountCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Notification Status"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Battery Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/batteryCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Battery"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Network Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phoneringerCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Phone Status"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sensors Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sensorCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Sensors"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/soundCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Microphone Noise Level"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+</GridLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/accelerometerData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer: "
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/gyroscopeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope: "
+        android:textSize="18sp"
+        android:layout_below="@id/accelerometerData"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/lightSensorData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ambient Light Level: "
+        android:textSize="18sp"
+        android:layout_below="@id/gyroscopeData"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
