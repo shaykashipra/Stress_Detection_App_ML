@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "100595977810",
+    "firebase_url": "https://stressdetection-acf26-default-rtdb.firebaseio.com",
+    "project_id": "stressdetection-acf26",
+    "storage_bucket": "stressdetection-acf26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100595977810:android:0e107568d92d4f76dc998b",
+        "android_client_info": {
+          "package_name": "com.example.stress_detection_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq0aFpOFPi8_qH4_5tvXV1aIh7wVOZMJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

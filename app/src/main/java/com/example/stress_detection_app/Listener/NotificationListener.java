@@ -1,5 +1,6 @@
 package com.example.stress_detection_app.Listener;
 
+import android.content.Context;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
@@ -8,27 +9,44 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NotificationListener extends NotificationListenerService {
-    public static int notificationCount = 0; // Total notification count
-    public static Map<String, Integer> notificationSources = new HashMap<>(); // Source app and their counts
+
+    public static int notificationCount = 0;
+    public static Map<String, Integer> notificationSources = new HashMap<>();
 
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
-        notificationCount++;
-        String packageName = sbn.getPackageName(); // Get the source app package name
+        super.onNotificationPosted(sbn);
 
-        // Update the count for the source app
+        String packageName = sbn.getPackageName();
+        Log.d("NotificationListener", "Notification posted from: " + packageName);
+
+        // Update notification count and sources
+        notificationCount++;
         notificationSources.put(packageName, notificationSources.getOrDefault(packageName, 0) + 1);
-        Log.d("NotificationListener", "Notification received from: " + packageName + ", Total: " + notificationCount);
+
+        Log.d("NotificationListener", "Notification count: " + notificationCount);
+        Log.d("NotificationListener", "Notification sources: " + notificationSources);
     }
+
 
     @Override
     public void onNotificationRemoved(StatusBarNotification sbn) {
-        // Handle notification removal if necessary
+        super.onNotificationRemoved(sbn);
+
+        // Optional: You can handle notification removal if needed
     }
 
-    @Override
-    public void onListenerConnected() {
-        super.onListenerConnected();
-        Log.d("NotificationListener", "Listener connected");
+    public static boolean isEnabled(Context context) {
+        String enabledNotificationListeners = android.provider.Settings.Secure.getString(
+                context.getContentResolver(),
+                "enabled_notification_listeners"
+        );
+        String packageName = context.getPackageName();
+        return enabledNotificationListeners != null && enabledNotificationListeners.contains(packageName);
     }
+    public static void resetNotifications() {
+        notificationCount = 0;
+        notificationSources.clear();
+    }
+
 }

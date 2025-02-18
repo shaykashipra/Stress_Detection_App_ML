@@ -25,9 +25,25 @@
         android:id="@+id/lightSensorData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ambient Light Level: "
-        android:textSize="18sp"
         android:layout_below="@id/gyroscopeData"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Ambient Light Level: "
+        android:textSize="18sp" />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/accelerometerChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/lightSensorData"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="299dp" />
+
 
 </RelativeLayout>
